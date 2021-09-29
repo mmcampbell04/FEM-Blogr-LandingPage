@@ -1,13 +1,14 @@
 // COLOURS
-
-$primary-CTA-text: hsl(356, 100%, 66%);
-$primary-hover-CTA: hsl(355, 100%, 74%);
-$primary-headings: hsl(208, 49%, 24%);
-$white-text: hsl(0, 0%, 100%);
-$footer-text: hsl(240, 2%, 79%);
-$body-copy: hsl(207, 13%, 34%);
-$footer-background: hsl(240, 10%, 16%);
-$background-gradient-intro1: hsl(13, 100%, 72%);
-$background-gradient-intro2: hsl(353, 100%, 62%);
-$background-gradient-body1: hsl(237, 17%, 21%);
-$background-gradient-body2: hsl(237, 23%, 32%);
+:root {
+  --primary-CTA-text: hsl(356, 100%, 66%);
+  --primary-hover-CTA: hsl(355, 100%, 74%);
+  --primary-headings: hsl(208, 49%, 24%);
+  --white-text: hsl(0, 0%, 100%);
+  --footer-text: hsl(240, 2%, 79%);
+  --body-copy: hsl(207, 13%, 34%);
+  --footer-background: hsl(240, 10%, 16%);
+  --background-gradient-intro1: hsl(13, 100%, 72%);
+  --background-gradient-intro2: hsl(353, 100%, 62%);
+  --background-gradient-body1: hsl(237, 17%, 21%);
+  --background-gradient-body2: hsl(237, 23%, 32%);
+}
