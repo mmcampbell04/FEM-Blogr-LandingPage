@@ -1,11 +1,19 @@
+// @use "./fonts";
+
 h1,
 h2,
 h3 {
   margin-top: 0;
+  font-family: var(--font-overpass);
 }
 
 a,
 a:visited,
 a:active {
   text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
 }

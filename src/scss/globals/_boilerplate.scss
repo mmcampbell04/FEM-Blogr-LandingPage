@@ -1,3 +1,5 @@
+@use "./fonts";
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -10,7 +12,24 @@ html {
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: var(--font-ubuntu);
+  font-family: var(--font-ubuntu), sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
