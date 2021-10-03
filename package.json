@@ -16,5 +16,8 @@
     "@parcel/transformer-sass": "^2.0.0-rc.0",
     "parcel": "^2.0.0-rc.0",
     "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "sass-rem": "^3.0.0"
   }
 }
