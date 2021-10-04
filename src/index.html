@@ -17,6 +17,7 @@
     <script type="module" src="./app/app.js"></script>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -28,65 +29,93 @@
   </head>
   <body>
     <header>
-      <nav>
-        <a href="#">
-          <img src="./images/logo.svg" alt="blogr logo" />
-        </a>
-        <div class="nav-bar">
-          <div class="nav-left">
-            <!-- product -->
-            <div class="nav-item">
-              <ul>
-                Product
-                <li>Overview</li>
-                <li>Pricing</li>
-                <li>Marketplace</li>
-                <li>Features</li>
-                <li>Integrations</li>
-              </ul>
-            </div>
-            <!-- company -->
-            <div class="nav-item">
-              <ul>
-                Company
-                <li>About</li>
-                <li>Team</li>
-                <li>Blog</li>
-                <li>Careers</li>
-              </ul>
-            </div>
-            <!-- connect -->
-            <div class="nav-item">
-              <ul>
-                Connect
-                <li>Contact</li>
-                <li>Newsletter</li>
-                <li>LinkedIn</li>
-              </ul>
-            </div>
-          </div>
-          <div class="nav-right">
-            <a href="#">Login</a>
-            <button>Sign Up</button>
-          </div>
+      <nav class="nav">
+        <div class="nav__header flex flex-jc-sb">
+          <a href="/" class="nav__list__logo">
+            <img src="./images/logo.svg" alt="blogr logo" class="blogr" />
+          </a>
+          <a
+            href="/"
+            id="hamburger-menu"
+            class="nav__toggle hide-for-desktop flex-a-s"
+          >
+            <img src="./images/icon-hamburger.svg" alt="hamburger icon"
+          /></a>
         </div>
+
+        <ul class="nav__list left hide-for-mobile">
+          <li class="nav__list__item">
+            <a href="#" class="main-item"
+              >Product<span
+                ><img
+                  src="./images/icon-arrow-light.svg"
+                  alt="arrow icon" /></span
+            ></a>
+            <ul class="nav__item__dropdown">
+              <li><a href="#">Overview</a></li>
+              <li><a hre="#">Pricing</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a hre="#">Features</a></li>
+              <li><a hre="#">Features</a></li>
+            </ul>
+          </li>
+
+          <li class="nav__list__item">
+            <a href="#" class="main-item"
+              >Company<span
+                ><img
+                  src="./images/icon-arrow-light.svg"
+                  alt="arrow icon" /></span
+            ></a>
+            <ul class="nav__item__dropdown">
+              <li><a href="#">About</a></li>
+              <li><a hre="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a hre="#">Careers</a></li>
+            </ul>
+          </li>
+
+          <li class="nav__list__item">
+            <a href="#" class="main-item"
+              >Connect<span
+                ><img src="./images/icon-arrow-light.svg" alt="arrow icon"
+              /></span>
+            </a>
+            <ul class="nav_item_dropdown">
+              <li><a href="#">Contact</a></li>
+              <li><a hre="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav__list right hide-for-mobile">
+          <li class="nav__list__item"><a href="#">Login</a></li>
+          <li class="nav__list__item"><button>Sign Up</button></li>
+        </ul>
       </nav>
+      <!-- hero section in header -->
       <div class="hero">
-        <h1>A modern publishing platform</h1>
-        <h2>Grow your audience and build your online brand</h2>
-        <div class="hero-btns">
+        <div class="hero__header txt-c">
+          <h1><span class="block">A modern</span> publishing platform</h1>
+          <h2>
+            Grow your audience and build your
+            <span class="block">online brand</span>
+          </h2>
+        </div>
+        <div class="hero__btns">
           <button class="start">Start for Free</button>
-          <button class="learn-more">Learn More</button>
+          <button class="learn__more">Learn More</button>
         </div>
       </div>
     </header>
     <main>
       <!-- for the furture -->
-      <section class="first">
+      <section class="first section">
         <h3>Designed for the future</h3>
-        <div class="content-wrapper">
-          <div class="content-text">
-            <div class="top-text">
+        <div class="container">
+          <div class="content__text">
+            <div class="top__text">
               <h4>Introducing an extensible editor</h4>
               <p>
                 Blogr features an exceedingly intuitive interface which lets you
@@ -97,7 +126,7 @@
                 change the looks of a blog.
               </p>
             </div>
-            <div class="bottom-text">
+            <div class="bottom__text">
               <h4>Robust content management</h4>
               <p>
                 Flexible content management enables users to easily move through
@@ -107,7 +136,7 @@
               </p>
             </div>
           </div>
-          <div class="content-img">
+          <div class="content__img">
             <!-- <img
               src="./images/illustration-editor-desktop.svg"
               alt="illustration editor"
