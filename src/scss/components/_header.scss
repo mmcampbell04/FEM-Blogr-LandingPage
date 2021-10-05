@@ -8,7 +8,6 @@ header {
   height: 600px;
   background-image: url(../images/bg-pattern-intro.svg),
     linear-gradient(
-      135deg,
       var(--background-gradient-intro1),
       var(--background-gradient-intro2)
     );
@@ -21,47 +20,20 @@ header {
 
   @include breakpoint-up(large) {
     height: 570px;
-    background-image: url(../images/bg-pattern-intro.svg),
-      linear-gradient(
-        to right,
-        var(--background-gradient-intro1),
-        var(--background-gradient-intro2)
-      );
+    // background-image: url(../images/bg-pattern-intro.svg),
+    //   linear-gradient(
+    //     var(--background-gradient-intro1),
+    //     var(--background-gradient-intro2)
+    //   );
     background-size: 200%, 100%;
-    background-position: 22% 53%;
-  }
-}
-
-.nav {
-  &__header {
-    padding: 3.5rem 1.5rem;
-
-    .blogr {
-      height: 82%;
-    }
-  }
-}
-
-.main-item {
-  display: flex;
-
-  > span {
-    align-self: center;
-    margin-left: rem.convert(6px);
+    background-position: 26% 53%;
   }
 }
 
 .hero {
-  padding: 0 2rem;
-  margin-top: 2.4rem;
+  margin-top: 2.6rem;
 
-  h1 {
-    font-size: 2.1rem;
-    font-weight: 400;
-    line-height: 1.4;
-  }
-
-  h2 {
+  &__subtitle {
     margin-top: rem.convert(20px);
     font-size: 1rem;
     font-weight: 300;
@@ -71,23 +43,5 @@ header {
   &__btns {
     margin-top: 2.5rem;
     text-align: center;
-  }
-
-  button {
-    border: 1px solid var(--white-text);
-    padding: rem.convert(12px 26px);
-    border-radius: rem.convert(25px);
-    font-size: 1rem;
-    font-family: "Ubuntu";
-    font-weight: 400;
-    background: none;
-    color: var(--white-text);
-  }
-
-  .start {
-    padding: rem.convert(12px 20px);
-    margin-right: rem.convert(10px);
-    color: var(--background-gradient-intro2);
-    background: var(--white-text);
   }
 }

@@ -31,7 +31,7 @@
     <header>
       <nav class="nav">
         <div class="nav__header flex flex-jc-sb">
-          <a href="/" class="nav__list__logo">
+          <a href="/" class="nav__logo">
             <img src="./images/logo.svg" alt="blogr logo" class="blogr" />
           </a>
           <a
@@ -41,71 +41,65 @@
           >
             <img src="./images/icon-hamburger.svg" alt="hamburger icon"
           /></a>
+          <a href="/" id="close-menu" class="nav__close close flex-a-s">
+            <img src="./images/icon-close.svg" alt="close icon"
+          /></a>
         </div>
+        <div class="nav__wrapper">
+          <ul class="nav__list nav__list--left">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Product</a>
+              <ul class="nav__dropdown">
+                <li><a href="#">Overview</a></li>
+                <li><a hre="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a hre="#">Features</a></li>
+              </ul>
+            </li>
 
-        <ul class="nav__list left hide-for-mobile">
-          <li class="nav__list__item">
-            <a href="#" class="main-item"
-              >Product<span
-                ><img
-                  src="./images/icon-arrow-light.svg"
-                  alt="arrow icon" /></span
-            ></a>
-            <ul class="nav__item__dropdown">
-              <li><a href="#">Overview</a></li>
-              <li><a hre="#">Pricing</a></li>
-              <li><a href="#">Marketplace</a></li>
-              <li><a hre="#">Features</a></li>
-              <li><a hre="#">Features</a></li>
-            </ul>
-          </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Company </a>
+              <ul class="nav__dropdown">
+                <li><a href="#">About</a></li>
+                <li><a hre="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a hre="#">Careers</a></li>
+              </ul>
+            </li>
 
-          <li class="nav__list__item">
-            <a href="#" class="main-item"
-              >Company<span
-                ><img
-                  src="./images/icon-arrow-light.svg"
-                  alt="arrow icon" /></span
-            ></a>
-            <ul class="nav__item__dropdown">
-              <li><a href="#">About</a></li>
-              <li><a hre="#">Team</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a hre="#">Careers</a></li>
-            </ul>
-          </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Connect </a>
+              <ul class="nav__dropdown">
+                <li><a href="#">Contact</a></li>
+                <li><a hre="#">Newsletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- divider for mobile menu sections -->
+          <div class="nav__divider hide-for-desktop"></div>
 
-          <li class="nav__list__item">
-            <a href="#" class="main-item"
-              >Connect<span
-                ><img src="./images/icon-arrow-light.svg" alt="arrow icon"
-              /></span>
-            </a>
-            <ul class="nav_item_dropdown">
-              <li><a href="#">Contact</a></li>
-              <li><a hre="#">Newsletter</a></li>
-              <li><a href="#">LinkedIn</a></li>
-            </ul>
-          </li>
-        </ul>
-
-        <ul class="nav__list right hide-for-mobile">
-          <li class="nav__list__item"><a href="#">Login</a></li>
-          <li class="nav__list__item"><button>Sign Up</button></li>
-        </ul>
+          <ul class="nav__list nav__list--right">
+            <li class="nav__item">
+              <a href="#" class="nav__link--login">Login</a>
+            </li>
+            <li class="nav__item">
+              <button class="btn button--secondary">Sign Up</button>
+            </li>
+          </ul>
+        </div>
       </nav>
       <!-- hero section in header -->
-      <div class="hero">
-        <div class="hero__header txt-c">
-          <h1><span class="block">A modern</span> publishing platform</h1>
-          <h2>
-            Grow your audience and build your
-            <span class="block">online brand</span>
-          </h2>
+      <div class="hero container">
+        <div class="hero__text txt-c">
+          <h1>A modern publishing platform</h1>
+          <p class="hero__subtitle">
+            Grow your audience and build your online brand
+          </p>
         </div>
         <div class="hero__btns">
-          <button class="start">Start for Free</button>
-          <button class="learn__more">Learn More</button>
+          <button class="btn button--primary">Start for Free</button>
+          <button class="btn">Learn More</button>
         </div>
       </div>
     </header>
