@@ -38,7 +38,7 @@
     var(--background-gradient-intro2)
   );
 
-  @include breakpoint-up(large) {
+  @include breakpoint-up(medium) {
     @include button--primary;
   }
 }

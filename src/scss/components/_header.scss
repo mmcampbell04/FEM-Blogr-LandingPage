@@ -1,13 +1,13 @@
 @use "../utils/" as *;
 @use "../node_modules/sass-rem" as rem;
-
+@use "./buttons" as btn;
 // MOBILE HEADER
 
 .header {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 600px;
+  height: rem.convert(600px);
   background-image: url(../images/bg-pattern-intro.svg),
     linear-gradient(
       var(--background-gradient-intro1),
@@ -20,15 +20,28 @@
   border-bottom-left-radius: rem.convert(100px);
   color: var(--white-text);
 
-  @include breakpoint-up(large) {
-    height: 570px;
+  @include breakpoint-up(medium) {
+    height: rem.convert(570px);
     background-size: 200%, 100%;
     background-position: 26% 53%;
   }
 
   &__hero {
     align-self: center;
+    margin-top: 5rem;
     width: 100%;
     text-align: center;
+
+    &__subtitle {
+      margin-top: 1.5rem;
+    }
   }
+
+  &__btns {
+    margin-top: 3.5rem;
+  }
+}
+
+.primary {
+  @include btn.button--primary;
 }

@@ -1,12 +1,12 @@
-console.log("helloooooo");
-
 const navToggleBtn = document.querySelector(".nav__toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 const closeIcon = document.querySelector(".nav__close");
+const body = document.querySelector("body");
 
 // OPEN HAMBURGER MENU
 navToggleBtn.addEventListener("click", function () {
   console.log("clicked");
+  body.classList.add("noscroll");
   mobileMenu.classList.toggle("open");
   navToggleBtn.classList.toggle("close");
   closeIcon.classList.toggle("open");
@@ -15,25 +15,43 @@ navToggleBtn.addEventListener("click", function () {
 // CLOSE MOBILE MENU
 closeIcon.addEventListener("click", function () {
   console.log("bite me");
+  body.classList.remove("noscroll");
   mobileMenu.classList.toggle("open");
   closeIcon.classList.toggle("open");
   navToggleBtn.classList.toggle("close");
 });
 
 // OPEN SUBMENUS
-var navLinks = document.querySelectorAll(".nav__left");
-navLinks.forEach(function (link) {
-  const toggleDropDown = () => {
-    let nextElement = link.nextElementSibling;
-    let status =
-      window.getComputedStyle(nextElement).display || nextElement.style.display;
-    navLinks.forEach((link) => {
-      link.classList.remove("open");
-      link.nextElementSibling.classList.remove("open");
-    });
-    status == "none"
-      ? nextElement.classList.add("open") && link.classList.add("open")
-      : nextElement.classList.remove("open");
-  };
-  link.addEventListener("click", toggleDropDown);
-});
+function toggleDropdown(dropdown) {
+  if (dropdown.classList.contains("active")) {
+    dropdown.classList.remove("active");
+    mobileMenu.style.boxShadow = "none";
+  } else {
+    let activeDropdowns = document.querySelectorAll(".nav__left.active");
+    for (let activeDropdown of activeDropdowns) {
+      activeDropdown.classList.remove("active");
+    }
+    dropdown.classList.add("active");
+    mobileMenu.style.boxShadow = "-9px 36px 20px var(--dropdown-background)";
+  }
+}
+
+let dropdowns = document.querySelectorAll(".nav__menu");
+for (let dropdown of dropdowns) {
+  // Toggle when dropdown toggle clicked:
+  let toggle = dropdown.querySelector(".nav__link");
+  toggle.addEventListener("click", function () {
+    toggleDropdown(dropdown);
+  });
+
+  // Deactivate when focus leaves dropdown:
+  dropdown.addEventListener(
+    "blur",
+    function (event) {
+      if (!this.contains(event.relatedTarget)) {
+        this.classList.remove("active");
+      }
+    },
+    true
+  );
+}

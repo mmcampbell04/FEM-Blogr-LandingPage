@@ -3,11 +3,11 @@
 
 .nav {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   width: 100vw;
   padding: 3.5rem 1.5rem;
 
-  @include breakpoint-up(large) {
+  @include breakpoint-up(medium) {
     display: flex;
     align-items: center;
     padding: 1.5rem 9.5rem;
@@ -28,9 +28,8 @@
     background: var(--white-text);
     color: var(--primary-headings);
     border-radius: 5px;
-    box-shadow: -9px 36px 20px var(--dropdown-background);
 
-    @include breakpoint-up(large) {
+    @include breakpoint-up(medium) {
       flex: 2 1 auto;
       display: flex;
       justify-content: space-between;
@@ -38,12 +37,37 @@
       color: var(--white-text);
       margin-top: 0;
       padding: 2rem 0;
-      box-shadow: none;
+    }
+  }
+
+  &__menu {
+    &.active {
+      .nav__dropdown {
+        display: block;
+        background: var(--dropdown-background);
+        margin: rem.convert(20px 0);
+        padding: rem.convert(20px 0);
+        border-radius: 5px;
+        font-size: rem.convert(14px);
+        text-align: center;
+
+        @include breakpoint-up(medium) {
+          position: absolute;
+          float: none;
+          background: var(--white-text);
+          color: var(--primary-headings);
+          padding: rem.convert(20px 20px);
+        }
+      }
+
+      .nav__link > picture {
+        transform: rotate(180deg);
+      }
     }
   }
 
   &__list {
-    @include breakpoint-up(large) {
+    @include breakpoint-up(medium) {
       display: flex;
       align-items: center;
 
@@ -56,6 +80,7 @@
       }
 
       &--right {
+        display: flex;
         > :first-child {
           margin-right: 1.5rem;
         }
@@ -80,19 +105,18 @@
     justify-content: center;
     align-items: center;
 
+    @include breakpoint-up(medium) {
+      position: relative;
+    }
+
     > picture {
       margin-left: rem.convert(5px);
+      transition: all 0.5s;
     }
   }
 
   &__dropdown {
     display: none;
-    background: var(--dropdown-background);
-    margin: rem.convert(20px 0);
-    padding: rem.convert(20px 0);
-    border-radius: 5px;
-    font-size: rem.convert(14px);
-    text-align: center;
 
     > li:hover {
       font-weight: 600;
@@ -100,11 +124,6 @@
 
     > :not(:first-child) {
       padding-top: rem.convert(10px);
-    }
-
-    @include breakpoint-up(large) {
-      background: var(--white-text);
-      color: var(--primary-headings);
     }
   }
 
@@ -116,17 +135,4 @@
   }
 }
 
-.nav__left.open {
-  display: flex;
-}
-
-.nav__left.open img {
-  transform: rotate(180deg) translateY(25%);
-}
-
-.nav__dropdown.open {
-  display: block;
-}
-// .nav__left.open::after {
-//   transform: rotate(180deg);
-// }
+// open menu
