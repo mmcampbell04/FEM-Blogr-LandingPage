@@ -2,6 +2,9 @@
 @use "../node_modules/sass-rem" as rem;
 
 .nav {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
   padding: 3.5rem 1.5rem;
 
   @include breakpoint-up(large) {
@@ -14,12 +17,18 @@
     height: 82%;
   }
 
+  &__close {
+    display: none;
+  }
+
   &__wrapper {
-    margin-top: 1.6rem;
+    display: none;
+    margin-top: 2.6rem;
     padding: 2rem;
     background: var(--white-text);
     color: var(--primary-headings);
     border-radius: 5px;
+    box-shadow: -9px 36px 20px var(--dropdown-background);
 
     @include breakpoint-up(large) {
       flex: 2 1 auto;
@@ -29,6 +38,7 @@
       color: var(--white-text);
       margin-top: 0;
       padding: 2rem 0;
+      box-shadow: none;
     }
   }
 
@@ -54,10 +64,8 @@
   }
 
   &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 1rem 0;
+    text-align: center;
     font-size: 1rem;
     font-weight: 600;
 
@@ -69,31 +77,11 @@
 
   &__link {
     display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &:after {
-      margin-left: 0.25rem;
-      align-self: center;
-      width: 0.5rem;
-      height: 0.5rem;
-      content: " ";
-      background-image: url(../images/icon-arrow-dark.svg);
-      background-repeat: no-repeat;
-      background-size: 0.5rem;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    @include breakpoint-up(large) {
-      &:after {
-        margin-left: 0.5rem;
-        align-self: center;
-        width: 0.5rem;
-        height: 0.5rem;
-        content: " ";
-        background-image: url(../images/icon-arrow-light.svg);
-        background-repeat: no-repeat;
-        background-size: 0.5rem;
-        transition: transform 0.2s ease-in-out;
-      }
+    > picture {
+      margin-left: rem.convert(5px);
     }
   }
 
@@ -104,6 +92,7 @@
     padding: rem.convert(20px 0);
     border-radius: 5px;
     font-size: rem.convert(14px);
+    text-align: center;
 
     > li:hover {
       font-weight: 600;
@@ -126,3 +115,18 @@
     border-top: 1px solid #e9ecef;
   }
 }
+
+.nav__left.open {
+  display: flex;
+}
+
+.nav__left.open img {
+  transform: rotate(180deg) translateY(25%);
+}
+
+.nav__dropdown.open {
+  display: block;
+}
+// .nav__left.open::after {
+//   transform: rotate(180deg);
+// }

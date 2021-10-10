@@ -1,11 +1,10 @@
 @use "../utils/" as *;
-@use "../node_modules/sass-rem" as rem;
 
 .btn {
   border: 1px solid var(--white-text);
-  padding: rem.convert(12px 26px);
-  border-radius: rem.convert(25px);
-  font-size: rem.convert(14px);
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 14px;
   font-family: "Ubuntu";
   font-weight: 400;
   background: none;
@@ -19,8 +18,8 @@
 }
 
 @mixin button--primary {
-  padding: rem.convert(12px 20px);
-  margin-right: rem.convert(10px);
+  padding: 12px 20px;
+  margin-right: 10px;
   color: var(--primary-CTA-text);
   background: var(--white-text);
 

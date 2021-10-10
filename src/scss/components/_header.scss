@@ -3,7 +3,9 @@
 
 // MOBILE HEADER
 
-header {
+.header {
+  display: flex;
+  justify-content: center;
   width: 100vw;
   height: 600px;
   background-image: url(../images/bg-pattern-intro.svg),
@@ -20,28 +22,13 @@ header {
 
   @include breakpoint-up(large) {
     height: 570px;
-    // background-image: url(../images/bg-pattern-intro.svg),
-    //   linear-gradient(
-    //     var(--background-gradient-intro1),
-    //     var(--background-gradient-intro2)
-    //   );
     background-size: 200%, 100%;
     background-position: 26% 53%;
   }
-}
 
-.hero {
-  margin-top: 2.6rem;
-
-  &__subtitle {
-    margin-top: rem.convert(20px);
-    font-size: 1rem;
-    font-weight: 300;
-    font-family: "Overpass";
-  }
-
-  &__btns {
-    margin-top: 2.5rem;
+  &__hero {
+    align-self: center;
+    width: 100%;
     text-align: center;
   }
 }

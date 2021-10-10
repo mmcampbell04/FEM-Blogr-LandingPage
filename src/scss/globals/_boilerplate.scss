@@ -34,7 +34,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
-  background-image: url("/design/desktop-design.jpg");
+  // background-image: url("/design/desktop-design.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -67,4 +67,9 @@ select {
   html {
     scroll-behavior: initial;
   }
+}
+
+button {
+  background: none;
+  border: none;
 }
