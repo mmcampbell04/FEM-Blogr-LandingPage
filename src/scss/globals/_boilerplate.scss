@@ -20,7 +20,7 @@ h6 {
 
 html,
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 html {
@@ -34,9 +34,10 @@ body {
   font-size: 100%;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
-  // background-image: url("/design/desktop-design.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 /* Make images easier to work with */
