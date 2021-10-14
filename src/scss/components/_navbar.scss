@@ -2,11 +2,10 @@
 @use "../node_modules/sass-rem" as rem;
 
 .nav {
-  position: fixed;
-  z-index: 1;
-  width: 100vw;
-  padding: 3.5rem 1.5rem;
+  // position: fixed;
+  // z-index: 1;
 
+  padding: 3.5rem 1.5rem;
   @include breakpoint-up(medium) {
     display: flex;
     align-items: center;
@@ -23,6 +22,9 @@
 
   &__wrapper {
     display: none;
+    position: absolute;
+    width: calc(100% - 46px);
+    font-family: var(--font-ubuntu);
     margin-top: 2.6rem;
     padding: 2rem;
     background: var(--white-text);
@@ -30,6 +32,7 @@
     border-radius: 5px;
 
     @include breakpoint-up(medium) {
+      position: static;
       flex: 2 1 auto;
       display: flex;
       justify-content: space-between;
@@ -117,6 +120,7 @@
 
   &__dropdown {
     display: none;
+    font-family: var(--font-overpass);
 
     > li:hover {
       font-weight: 600;
@@ -134,5 +138,3 @@
     border-top: 1px solid #e9ecef;
   }
 }
-
-// open menu

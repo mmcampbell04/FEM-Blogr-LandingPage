@@ -4,9 +4,9 @@
 // MOBILE HEADER
 
 .header {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+  // display: flex;
+  // justify-content: center;
+  width: 100%;
   height: rem.convert(600px);
   background-image: url(../images/bg-pattern-intro.svg),
     linear-gradient(
@@ -28,12 +28,14 @@
 
   &__hero {
     align-self: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
     width: 100%;
     text-align: center;
 
     &__subtitle {
       margin-top: 1.5rem;
+      padding: 0 2.5rem;
     }
   }
 

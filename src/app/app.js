@@ -5,7 +5,6 @@ const body = document.querySelector("body");
 
 // OPEN HAMBURGER MENU
 navToggleBtn.addEventListener("click", function () {
-  console.log("clicked");
   body.classList.add("noscroll");
   mobileMenu.classList.toggle("open");
   navToggleBtn.classList.toggle("close");
@@ -14,7 +13,6 @@ navToggleBtn.addEventListener("click", function () {
 
 // CLOSE MOBILE MENU
 closeIcon.addEventListener("click", function () {
-  console.log("bite me");
   body.classList.remove("noscroll");
   mobileMenu.classList.toggle("open");
   closeIcon.classList.toggle("open");
@@ -32,7 +30,10 @@ function toggleDropdown(dropdown) {
       activeDropdown.classList.remove("active");
     }
     dropdown.classList.add("active");
-    mobileMenu.style.boxShadow = "-9px 36px 20px var(--dropdown-background)";
+    window.screen.width <= 976
+      ? (mobileMenu.style.boxShadow =
+          "-9px 36px 20px var(--dropdown-background)")
+      : (mobileMenu.style.boxShadow = "none");
   }
 }
 

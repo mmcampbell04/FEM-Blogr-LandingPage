@@ -18,11 +18,6 @@ h6 {
   margin: 0;
 }
 
-html,
-body {
-  overflow: hidden;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -30,10 +25,12 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  width: 100vw;
   font-family: var(--font-overpass), sans-serif;
   font-size: 100%;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  color: var(--body-copy);
 
   &.noscroll {
     overflow: hidden;
