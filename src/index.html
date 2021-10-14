@@ -122,7 +122,7 @@
         </div>
       </nav>
       <!-- hero section in header -->
-      <div class="header__hero container">
+      <div class="header__hero">
         <div class="header__text txt-c">
           <h1>A modern publishing platform</h1>
           <p class="header__subtitle">
@@ -135,13 +135,22 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="main">
       <!-- for the furture -->
-      <section class="first section">
+      <section class="section section--one">
         <h3>Designed for the future</h3>
-        <div class="container">
-          <div class="content__text">
-            <div class="top__text">
+        <div class="section__content">
+          <div class="section__img">
+            <picture>
+                  <source
+                    media="(min-width:1024px)"
+                    srcset="./images/illustration-editor-desktop.svg"
+                  />
+                  <img class="section__image" src="./images/illustration-editor-mobile.svg" atl="editor illustration"
+                </picture>
+          </div>
+          <div class="section__text">
+            <div class="section__text section__text--top">
               <h4>Introducing an extensible editor</h4>
               <p>
                 Blogr features an exceedingly intuitive interface which lets you
@@ -152,7 +161,7 @@
                 change the looks of a blog.
               </p>
             </div>
-            <div class="bottom__text">
+            <div class="section__text section__text--bottom">
               <h4>Robust content management</h4>
               <p>
                 Flexible content management enables users to easily move through
@@ -162,25 +171,18 @@
               </p>
             </div>
           </div>
-          <div class="content__img">
-            <!-- <img
-              src="./images/illustration-editor-desktop.svg"
-              alt="illustration editor"
-            /> -->
+          
           </div>
         </div>
       </section>
       <!-- state of the art infrastructure -->
-      <section class="second">
-        <div class="content-wrapper two">
-          <div class="content-left">
-            <!-- <img
-              src="./images/illustration-phones.svg"
-              alt="phone illustrations"
-            /> -->
+      <section class="section section--two">
+        <div class="section__content--two">
+          <div class="section__img--hero">
+            <img class="section__image--hero" src="./images/illustration-phones.svg" atl="phones illustration">
           </div>
-          <div class="content-right">
-            <h3>State of the Art Infrastructure</h3>
+          <div class="section__text section__text--hero">
+            <h2>State of the Art Infrastructure</h2>
             <p>
               With reliability and speed in mind, worldwide data centers provide
               the backbone for ultra-fast connectivity. This ensures your site
@@ -191,10 +193,19 @@
         </div>
       </section>
       <!-- free open simple -->
-      <section class="third">
-        <div class="content-wrapper">
-          <div class="content-text">
-            <div class="top-text">
+      <section class="section section--three">
+        <div class="section__content">
+           <div class="section__img">
+             <picture>
+                  <source
+                    media="(min-width:1024px)"
+                    srcset="./images/illustration-laptop-desktop.svg"
+                  />
+                  <img class="section__image" src="./images/illustration-laptop-mobile.svg" atl="laptop illustration"
+                </picture>
+            </div>
+          <div class="section__text">
+            <div class="section__text section__text--top">
               <h4>Free, open, simple</h4>
               <p>
                 Blogr is a free and open source application backed by a large
@@ -205,7 +216,7 @@
                 learn.
               </p>
             </div>
-            <div class="bottom-text">
+            <div class="section__text section__text--bottom">
               <h4>Powerful tooling</h4>
               <p>
                 Batteries included. We built a simple and straightforward CLI
@@ -214,12 +225,7 @@
               </p>
             </div>
           </div>
-          <div class="content-img">
-            <!-- <img
-              src="./images/illustration-laptop-desktop.svg"
-              alt="illustration laptop"
-            /> -->
-          </div>
+         
         </div>
       </section>
     </main>

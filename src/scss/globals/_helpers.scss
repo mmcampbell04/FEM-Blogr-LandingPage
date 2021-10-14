@@ -1,9 +1,5 @@
 @use "../utils/" as *;
 
-.container {
-  padding: 0 1.5rem;
-}
-
 // FLEXBOX & FORFATTING
 .flex {
   display: flex;
@@ -27,14 +23,6 @@
   &-a-s {
     align-self: center;
   }
-}
-
-.block {
-  display: block;
-}
-
-.txt-c {
-  text-align: center;
 }
 
 .close {
