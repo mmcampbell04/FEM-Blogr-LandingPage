@@ -1,0 +1,63 @@
+@use "../utils/" as *;
+@use "../node_modules/sass-rem" as rem;
+
+.footer {
+  margin-top: 4.5rem;
+  border-top-right-radius: 100px;
+  background: var(--footer-background);
+  font-family: var(--font-ubuntu);
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    display: flex;
+    padding: 3rem;
+  }
+
+  &__logo {
+    padding: 3rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    > img {
+      margin: 0 auto;
+    }
+  }
+
+  &__wrapper {
+    @include breakpoint-up(medium) {
+      flex: 2 1 auto;
+      display: flex;
+      padding: 3rem;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    font-weight: 500;
+    color: var(--white-text);
+
+    > li {
+      color: var(--footer-text);
+      font-weight: 400;
+      line-height: 2.5;
+    }
+
+    > li:first-child {
+      margin-top: 1rem;
+    }
+  }
+
+  &__item:not(:first-child) {
+    margin-top: 3rem;
+
+    @include breakpoint-up(medium) {
+      margin-top: 0;
+    }
+  }
+
+  &__item:last-child {
+    padding-bottom: 3rem;
+  }
+}
