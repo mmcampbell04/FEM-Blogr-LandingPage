@@ -1,0 +1,44 @@
+@use "../utils/" as *;
+@use "../node_modules/sass-rem" as rem;
+
+.hero {
+  margin-top: 16rem;
+  color: var(--white-text);
+  background: linear-gradient(
+    var(--background-gradient-body1),
+    var(--background-gradient-body2)
+  );
+  border-radius: 0px 100px 0px 100px;
+
+  @include breakpoint-up(medium) {
+    margin-top: 20rem;
+  }
+
+  &__content {
+    background-image: url(../images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 163%;
+    background-position: 50% -240px;
+    border-radius: 0px 100px 0px 100px;
+  }
+
+  &__image {
+    max-height: 12rem;
+    > img {
+      position: relative;
+      top: -200px;
+
+      @include breakpoint-up(medium) {
+        top: -285px;
+      }
+    }
+  }
+
+  &__text {
+    padding: 0 2rem 4rem 2rem;
+
+    @include breakpoint-up(medium) {
+      margin: 5.5rem 2rem 0 2rem;
+    }
+  }
+}

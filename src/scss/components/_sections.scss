@@ -1,0 +1,71 @@
+@use "../utils/" as *;
+@use "../node_modules/sass-rem" as rem;
+
+.section {
+  margin-top: 4rem;
+
+  @include breakpoint-up(medium) {
+    margin: 4rem 2rem 0 2rem;
+  }
+
+  &__content {
+    margin-top: 3rem;
+
+    @include breakpoint-up(medium) {
+      margin-top: 0;
+    }
+    @include breakpoint-up(large) {
+      display: flex;
+      margin-top: 1.25rem;
+    }
+
+    &--editor {
+      margin-top: 2rem;
+    }
+  }
+
+  &__image {
+    margin-top: 4rem;
+    &--editor {
+      @include images-onmobile;
+      margin-top: 0;
+      background-image: url(../images/illustration-editor-mobile.svg);
+
+      @include breakpoint-up(medium) {
+        margin-top: 4rem;
+        @include images-onpad;
+      }
+
+      @include breakpoint-up(large) {
+        order: 2;
+        height: 30rem;
+        min-width: 50%;
+        background-image: url(../images/illustration-editor-desktop.svg);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        background-position: -225% 0%;
+      }
+    }
+
+    &--laptop {
+      @include images-onmobile;
+      background-image: url(../images/illustration-laptop-mobile.svg);
+
+      @include breakpoint-up(medium) {
+        @include images-onpad;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 0;
+
+    > h4 {
+      margin: 2rem 3.5rem 0 3.5rem;
+
+      @include breakpoint-up(medium) {
+        margin-top: 4rem;
+      }
+    }
+  }
+}
