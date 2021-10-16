@@ -1,0 +1,12 @@
+@mixin images-onmobile {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 20rem;
+}
+
+@mixin images-onpad {
+  min-height: 40rem;
+  background-position: 50% 50%;
+}
