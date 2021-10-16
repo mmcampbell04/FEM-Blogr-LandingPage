@@ -14,16 +14,40 @@
     margin-top: 20rem;
   }
 
+  @include breakpoint-up(large) {
+    margin: 5rem 0;
+    background: linear-gradient(
+      to right,
+      var(--background-gradient-body1),
+      var(--background-gradient-body2)
+    );
+  }
+
   &__content {
     background-image: url(../images/bg-pattern-circles.svg);
     background-repeat: no-repeat;
-    background-size: 163%;
-    background-position: 50% -240px;
+    background-size: 161%;
+    background-position: 50% 570%;
     border-radius: 0px 100px 0px 100px;
+
+    @include breakpoint-up(medium) {
+      background-position: 50% 88%;
+    }
+
+    @include breakpoint-up(large) {
+      display: flex;
+      background-size: 74%;
+      background-position: -62% 80%;
+    }
   }
 
   &__image {
-    max-height: 12rem;
+    height: 12rem;
+
+    @include breakpoint-up(large) {
+      width: 115%;
+    }
+
     > img {
       position: relative;
       top: -200px;
@@ -31,14 +55,30 @@
       @include breakpoint-up(medium) {
         top: -285px;
       }
+
+      @include breakpoint-up(large) {
+        top: -69px;
+        left: 145px;
+      }
     }
   }
 
   &__text {
-    padding: 0 2rem 4rem 2rem;
-
+    padding-bottom: 4rem;
     @include breakpoint-up(medium) {
       margin: 5.5rem 2rem 0 2rem;
+    }
+
+    @include breakpoint-up(large) {
+      margin: 0rem 8rem 0rem 8rem;
+      padding: 6rem;
+    }
+
+    > h3,
+    p {
+      @include breakpoint-up(large) {
+        text-align: left;
+      }
     }
   }
 }
