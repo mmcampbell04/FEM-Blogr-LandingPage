@@ -10,3 +10,9 @@
   min-height: 40rem;
   background-position: 50% 50%;
 }
+
+@mixin images-ondesktop {
+  margin-top: 0;
+  height: 50rem;
+  min-width: 50%;
+}

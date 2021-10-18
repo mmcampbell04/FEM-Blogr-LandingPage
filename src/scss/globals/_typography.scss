@@ -77,6 +77,6 @@ p {
 
   @include breakpoint-up(large) {
     padding: 0;
-    text-align: right;
+    text-align: left;
   }
 }
