@@ -1,18 +1,13 @@
-@mixin images-onmobile {
-  position: relative;
-  background-size: contain;
+@mixin before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 90%;
+  background-image: url(../images/bg-pattern-circles.svg);
   background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  min-height: 20rem;
-}
-
-@mixin images-onpad {
-  min-height: 35rem;
-}
-
-@mixin images-ondesktop {
-  background-position-y: center;
-  min-height: 40rem;
-  // min-width: 50%;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+  opacity: 30%;
 }
