@@ -16,7 +16,7 @@
 .prettierignore
 
 
-dist/
+
 node_modules
 .parcel-cache
 .sassrc
