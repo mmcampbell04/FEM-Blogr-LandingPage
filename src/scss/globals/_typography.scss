@@ -18,12 +18,6 @@ a:active {
   cursor: pointer;
 }
 
-@include breakpoint-up(large) {
-  a:hover {
-    text-decoration: underline;
-  }
-}
-
 ul {
   padding: 0;
   margin: 0;

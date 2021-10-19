@@ -117,10 +117,6 @@
     justify-content: center;
     align-items: center;
 
-    @include breakpoint-up(medium) {
-      position: relative;
-    }
-
     > picture {
       margin-left: rem.convert(5px);
       transition: all 0.5s;
