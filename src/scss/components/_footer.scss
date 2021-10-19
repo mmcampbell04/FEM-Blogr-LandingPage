@@ -13,6 +13,12 @@
     padding: 3rem;
   }
 
+  @include breakpoint-up(large) {
+    margin-top: 12rem;
+    padding: 1.5rem 10rem;
+    text-align: left;
+  }
+
   &__logo {
     padding: 3rem;
 
@@ -32,6 +38,10 @@
       padding: 3rem;
       justify-content: space-between;
     }
+
+    @include breakpoint-up(large) {
+      justify-content: space-around;
+    }
   }
 
   &__item {
@@ -46,6 +56,10 @@
 
     > li:first-child {
       margin-top: 1rem;
+
+      @include breakpoint-up(large) {
+        margin-top: 2rem;
+      }
     }
   }
 
