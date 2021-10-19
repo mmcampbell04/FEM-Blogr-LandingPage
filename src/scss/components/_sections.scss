@@ -5,95 +5,89 @@
   margin-top: 4rem;
 
   @include breakpoint-up(medium) {
-    margin: 4rem 2rem 0 2rem;
+    padding: 0 2rem;
   }
 
   @include breakpoint-up(large) {
-    margin: 0;
+    padding: 0;
+    margin-top: 8rem;
+
+    > h4 {
+      text-align: center;
+      font-size: rem.convert(40px);
+    }
   }
 
-  > h4 {
-    @include breakpoint-up(medium) {
-      font-size: 2.5rem;
-      margin-top: 4rem;
-    }
-
+  &--laptop {
     @include breakpoint-up(large) {
-      margin-top: 0;
-      font-size: 3rem;
-      position: relative;
-      top: 100px;
+      margin-top: 12rem;
     }
   }
 
   &__content {
-    margin-top: 3rem;
-
-    @include breakpoint-up(medium) {
-      margin-top: 0;
-    }
     @include breakpoint-up(large) {
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
     }
   }
 
   &__image {
-    margin-top: 4rem;
-    &--editor {
-      @include images-onmobile;
-      margin-top: 0;
-      background-image: url(../images/illustration-editor-mobile.svg);
+    min-height: 21rem;
+    width: 100%;
+    background-position: center;
+    margin: 2rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-      @include breakpoint-up(medium) {
-        margin-top: 4rem;
-        @include images-onpad;
-      }
+    @include breakpoint-up(medium) {
+      min-height: 31rem;
+      background-size: contain;
+    }
+
+    @include breakpoint-up(large) {
+      min-height: 50rem;
+      margin: 0;
+      background-size: cover;
+    }
+
+    &--editor {
+      background-image: url(../images/illustration-editor-mobile.svg);
 
       @include breakpoint-up(large) {
         order: 2;
-        @include images-ondesktop;
-        background-image: url(../images/illustration-editor-desktop.svg);
-        background-position: -183% 50%;
+        transform: translateX(13%);
       }
     }
 
     &--laptop {
-      @include images-onmobile;
       background-image: url(../images/illustration-laptop-mobile.svg);
 
-      @include breakpoint-up(medium) {
-        @include images-onpad;
-      }
-
       @include breakpoint-up(large) {
-        @include images-ondesktop;
-        background-image: url(../images/illustration-laptop-desktop.svg);
-        background-position: 79% 50%;
+        transform: translateX(-16%);
       }
     }
   }
 
   &__text {
-    margin-top: 0;
+    @include breakpoint-up(large) {
+      margin: 10rem;
+    }
 
-    &--editor,
-    &--laptop {
+    > :nth-child(3) {
+      margin-top: 2rem;
+
       @include breakpoint-up(large) {
-        padding: 11rem 0 0 9.5rem;
+        margin-top: 4rem;
       }
+    }
 
-      > h4 {
-        margin: 2rem 3.5rem 0 3.5rem;
+    @include breakpoint-up(large) {
+      // padding: 7rem;
+    }
 
-        @include breakpoint-up(medium) {
-          margin-top: 4rem;
-        }
-
-        @include breakpoint-up(large) {
-          margin: 2.5rem 3.5rem 0 0;
-          text-align: left;
-        }
-      }
+    &--laptop {
+      margin: 12rem 12rem 12rem 5rem;
     }
   }
 }

@@ -2,20 +2,21 @@
 @use "../node_modules/sass-rem" as rem;
 
 .hero {
-  margin-top: 16rem;
-  color: var(--white-text);
+  margin-top: 17rem;
+  // min-height: 21rem;
   background: linear-gradient(
     var(--background-gradient-body1),
     var(--background-gradient-body2)
   );
-  border-radius: 0px 100px 0px 100px;
+  color: var(--white-text);
+  border-radius: 0 100px 0 100px;
 
   @include breakpoint-up(medium) {
-    margin-top: 20rem;
+    background-position: 50% 88%;
   }
 
   @include breakpoint-up(large) {
-    margin: 5rem 0;
+    margin-top: 12rem;
     background: linear-gradient(
       to right,
       var(--background-gradient-body1),
@@ -26,59 +27,58 @@
   &__content {
     background-image: url(../images/bg-pattern-circles.svg);
     background-repeat: no-repeat;
-    background-size: 161%;
-    background-position: 50% 570%;
-    border-radius: 0px 100px 0px 100px;
+    background-size: 160%;
+    background-position: 50% -400%;
+    border-radius: 0 100px 0 100px;
 
     @include breakpoint-up(medium) {
-      background-position: 50% 88%;
+      background-position: 50% 100%;
     }
 
     @include breakpoint-up(large) {
-      display: flex;
-      background-size: 74%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      background-size: 75%;
       background-position: -62% 80%;
     }
   }
 
   &__image {
     height: 12rem;
+    width: 100%;
+
+    @include breakpoint-up(medium) {
+      margin-top: 25rem;
+    }
 
     @include breakpoint-up(large) {
-      width: 115%;
+      margin-top: 0;
     }
 
     > img {
       position: relative;
-      top: -200px;
-
-      @include breakpoint-up(medium) {
-        top: -285px;
-      }
+      margin: 0 auto;
+      transform: translatey(-49%);
 
       @include breakpoint-up(large) {
-        top: -69px;
-        left: 145px;
+        transform: translatey(-13%);
       }
     }
   }
 
   &__text {
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
+    margin-top: 3.5rem;
+
     @include breakpoint-up(medium) {
-      margin: 5.5rem 2rem 0 2rem;
+      padding: 0 2rem 7rem 2rem;
+      margin-top: 7rem;
     }
 
     @include breakpoint-up(large) {
-      margin: 0rem 8rem 0rem 8rem;
-      padding: 6rem;
-    }
-
-    > h3,
-    p {
-      @include breakpoint-up(large) {
-        text-align: left;
-      }
+      margin: 5rem 12rem 5rem 5rem;
+      padding: 1rem;
     }
   }
 }
