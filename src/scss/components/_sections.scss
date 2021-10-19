@@ -15,12 +15,13 @@
     > h4 {
       text-align: center;
       font-size: rem.convert(40px);
+      transform: translateY(80%);
     }
   }
 
   &--laptop {
     @include breakpoint-up(large) {
-      margin-top: 12rem;
+      margin-top: 6rem;
     }
   }
 
@@ -46,9 +47,7 @@
     }
 
     @include breakpoint-up(large) {
-      min-height: 50rem;
       margin: 0;
-      background-size: cover;
     }
 
     &--editor {
@@ -56,7 +55,8 @@
 
       @include breakpoint-up(large) {
         order: 2;
-        transform: translateX(13%);
+        transform: translateX(5%);
+        background-size: 120%;
       }
     }
 
@@ -65,6 +65,7 @@
 
       @include breakpoint-up(large) {
         transform: translateX(-16%);
+        background-size: 136%;
       }
     }
   }
@@ -78,16 +79,12 @@
       margin-top: 2rem;
 
       @include breakpoint-up(large) {
-        margin-top: 4rem;
+        margin-top: 1.5rem;
       }
     }
 
-    @include breakpoint-up(large) {
-      // padding: 7rem;
-    }
-
     &--laptop {
-      margin: 12rem 12rem 12rem 5rem;
+      margin: 12rem 12rem 12rem 0;
     }
   }
 }
