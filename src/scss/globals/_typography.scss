@@ -45,10 +45,15 @@ h1 {
   }
 }
 
+h2 {
+  text-align: center;
+  font-size: rem.convert(40px);
+}
+
 h3 {
   font-size: rem.convert(30px);
   @include breakpoint-up(medium) {
-    font-size: rem.convert(36px);
+    font-size: rem.convert(26px);
   }
 
   @include breakpoint-up(large) {
