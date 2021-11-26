@@ -45,11 +45,11 @@ h1 {
   }
 }
 
-h2 {
-  padding: 2rem 2.75rem 0;
-  font-size: 1rem;
-  font-weight: 300;
-}
+// h2 {
+//   padding: 2rem 2.75rem 0;
+//   font-size: 1rem;
+//   font-weight: 300;
+// }
 
 h3 {
   font-size: rem.convert(30px);
@@ -81,6 +81,6 @@ p {
 
   @include breakpoint-up(large) {
     padding: 0;
-    text-align: left;
+    // text-align: left;
   }
 }
